@@ -1,18 +1,6 @@
-
-% Default to the notebook output style
-
-    
-
-
-% Inherit from the specified cell style.
-
-
-
-
-    
 \documentclass[11pt]{article}
 
-    
+    \pagenumbering{gobble}
     
     \usepackage[T1]{fontenc}
     % Nicer default font (+ math font) than Computer Modern for most use cases
@@ -275,16 +263,16 @@
     \begin{document}
     
     
-    \maketitle
+   % \maketitle
     
     
-
+\section*{01\_Getting\_Data.ipynb}
     
     \hypertarget{imports}{%
 \paragraph{Imports}\label{imports}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{requests}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{requests}
         \PY{k+kn}{import} \PY{n+nn}{json}
         \PY{k+kn}{import} \PY{n+nn}{pandas}
         \PY{k+kn}{from} \PY{n+nn}{datetime} \PY{k}{import} \PY{n}{datetime}
@@ -299,14 +287,14 @@
 \paragraph{Settings}\label{settings}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+{\color{incolor}In [{\color{incolor}4}]:} \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
 \end{Verbatim}
 
     \hypertarget{constants}{%
 \paragraph{Constants}\label{constants}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{bitcoin\PYZus{}title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bitcoin price in USD}\PY{l+s+s1}{\PYZsq{}}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{bitcoin\PYZus{}title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bitcoin price in USD}\PY{l+s+s1}{\PYZsq{}}
         \PY{n}{search\PYZus{}volume\PYZus{}title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{search volume}\PY{l+s+s1}{\PYZsq{}}
 \end{Verbatim}
 
@@ -315,7 +303,7 @@
 Data}\label{getting-bitcoin-price-data}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{}get data}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c+c1}{\PYZsh{}get data}
         \PY{n}{response} \PY{o}{=} \PY{n}{requests}\PY{o}{.}\PY{n}{get}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{https://api.coindesk.com/v1/bpi/historical/close.json?start=2011\PYZhy{}05\PYZhy{}01\PYZam{}end=2017\PYZhy{}11\PYZhy{}18}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{response\PYZus{}as\PYZus{}json} \PY{o}{=} \PY{n}{json}\PY{o}{.}\PY{n}{loads}\PY{p}{(}\PY{n}{response}\PY{o}{.}\PY{n}{content}\PY{p}{)}
         
@@ -332,7 +320,7 @@ Data}\label{getting-bitcoin-price-data}}
 \end{Verbatim}
 
             \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}4}]:}             bitcoin\_price
+{\color{outcolor}Out[{\color{outcolor}6}]:}             bitcoin\_price
         date                     
         2011-05-01         3.0331
         2011-05-02         3.2000
@@ -450,13 +438,5 @@ Data}\label{getting-google-trends-data}}
     \end{center}
     { \hspace*{\fill} \\}
     
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} 
-\end{Verbatim}
-
-
-    % Add a bibliography block to the postdoc
-    
-    
-    
+        
     \end{document}
